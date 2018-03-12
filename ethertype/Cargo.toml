@@ -1,0 +1,7 @@
+[package]
+name = "ethertype"
+version = "0.1.0"
+authors = ["Victor Korkin <victor.korkin@gmail.com>"]
+
+[dependencies]
+common = {path="../common", version = "*"}
