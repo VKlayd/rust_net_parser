@@ -1,0 +1,10 @@
+[package]
+name = "ip"
+version = "0.1.0"
+authors = ["Victor Korkin <victor.korkin@gmail.com>"]
+
+[dependencies]
+common = {path="../common", version = "*"}
+ethernet = {path = "../ethernet" , version = "*"}
+vlan = {path="../vlan", version="*"}
+ethertype = {path = "../ethertype" , version = "*"}

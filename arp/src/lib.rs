@@ -104,7 +104,7 @@ impl <'a> TryFrom<&'a [u8]> for ArpPacket<'a> {
 
         let arp_body = parse_arp_body(arp_hdr.ar_pro, &buf[eth_end + ptr + 2 + 8..buf.len()]);
 
-        Ok(ArpPacket { eth_header: ethernet::eth_parse(buf), vlans: v, arp_hdr: arp_hdr, arp_body: arp_body })
+        Ok(ArpPacket { eth_header: ethernet::EthHeader::try_from(buf)?, vlans: v, arp_hdr: arp_hdr, arp_body: arp_body })
     }
 }
 
